@@ -16,26 +16,76 @@
     </header>
     <div id="kanban-board">
         <div class="column">
-            <div class="column-body">
+            <div class="column-list">
                 <div class="column-header">
                     <!--Here goes the header for column-->
-                    TODO
-                    <button class="button delete">&#10008;</button>
+                    Todo
+                    <button class="button delete">&#10007;</button>
                 </div>
                 <ul class="list-cards">
                     <li class="card">
+                        <!--Enter card info -->
                         This is a card!
                         <button class="button delete">&#10007;</button>
                     </li>
                     <li class="add-new-card">
                         <form class="new-card" action="index.html">
                             <input type="text" name="cart-title" placeholder="please name your card">
-                            <button class="button add-card">&#10003;</button>
+                            <button class="button add-card">Add new card</button>
                         </form>
                     </li>
                 </ul>
             </div>
         </div>
+        <div class="column">
+                <div class="column-list">
+                    <div class="column-header">
+                        <!--Here goes the header for column-->
+                        Doing
+                        <button class="button delete">&#10007;</button>
+                    </div>
+                    <ul class="list-cards">
+                        <li class="card">
+                            <!--Enter card info -->
+                            This is a card!
+                            <button class="button delete">&#10007;</button>
+                        </li>
+                        <li class="add-new-card">
+                            <form class="new-card" action="index.html">
+                                <input type="text" name="cart-title" placeholder="please name your card">
+                                <button class="button add-card">Add new card</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                    <div class="column-list">
+                        <div class="column-header">
+                            <!--Here goes the header for column-->
+                            Done
+                            <button class="button delete">&#10007;</button>
+                        </div>
+                        <ul class="list-cards">
+                            <li class="card">
+                                <!--Enter card info -->
+                                This is a card!
+                                <button class="button delete">&#10007;</button>
+                            </li>
+                            <li class="add-new-card">
+                                <form class="new-card" action="index.html">
+                                    <input type="text" name="cart-title" placeholder="please name your card">
+                                    <button class="button add-card">Add new card</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        <div class="column" id="lastColumn">
+            <button id="new-column-list" class="button">Add new list</button>
+        </div>
     </div>
+
 </body>
+<script src="app.js"></script>
 </html>
