@@ -1,0 +1,12 @@
+body, html {
+    margin: 0;
+    padding: 30px 0 0;
+    background-color: cyan;
+    color: black;
+}
+h1 {
+    text-align: center;
+    border-bottom-style: solid;
+    border-color: aliceblue;
+    border: 10px white;
+}
