@@ -36,9 +36,12 @@ $(function() {
                 event.preventDefault();
                 event.stopImmediatePropagation();
                 $(event.target).find('input').val('');
+                var date = getDate();
                 if(cardText[0].value !== "") {
                     var newCard = `<li class="card">
-                    <span>${cardText[0].value}</span>
+                    <span class="card-title">${cardText[0].value} | </span>
+                    <span class="date-title"> due date:  ${date}</span>
+                    <button class="button cardInfo">&#128712;</button>
                     <button class="button delete">&#10007;</button>
                     </li>`;
                     $(defaultThis).closest('.add-new-card').before(newCard);
@@ -52,7 +55,26 @@ $(function() {
         });
     });
 
-    $("#tabs").tabs({
+    $('#effect').on('click', function() {
+        $( "#effect" ).animate({
+            backgroundColor: "#000000",
+            color: "#ffffff",
+            width: 500
+          }, 1000 );
+    });
+
+
+    function getDate() {
+        var date =  $('#datepicker').datepicker('getDate');
+        return date.toISOString().substring(0, 10);
+    }
+
+    $('#datepicker').datepicker({
+        changeMonth: true,
+        changeYear: true
+      });
+
+    $('#tabs').tabs({
         event: "mouseover"
     });
 });

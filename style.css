@@ -9,10 +9,10 @@ header h1 {
 }
 
 #kanban-board {
-    /* height: 120vh; */
+    
 }
 .column{
-    width: 350px;
+    width: 400px;
     margin: 0 5px;
     height: 100%;
     box-sizing: border-box;
@@ -81,6 +81,12 @@ header h1 {
     position: absolute;
     top: 3px;
     right: 4px;
+    padding: 0px
+}
+.card .cardInfo {
+    position: absolute;
+    top: 3px;
+    right: 30px;
     padding: 0px
 }
 

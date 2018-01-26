@@ -31,27 +31,28 @@
                 </form>
             </div>
             <div id="tabs-2">
-                <p>This is my second tab</p>
+                <p>Date: <input type="text" id="datepicker"></p>
             </div>
         </div>
     </div>
     <div id="dialog-overlay" class="hidden">
     </div>
     <header>
-        <h1>Pontus Kanban board</h1>
+        <h1 id="effect">Pontus Kanban board</h1>
     </header>
     <div id="kanban-board">
         <div class="column">
             <div class="column-list">
                 <div class="column-header">
                     <!--Here goes the header for column-->
-                    Todo
+                    <h2>Todo</h2>
                     <button class="button delete">&#10007;</button>
                 </div>
                 <ul class="list-cards">
                     <li class="card">
                         <!--Enter card info -->
-                        This is a card!
+                        <span class="card-title">This is an example card!</span> 
+                        <button class="button cardInfo">&#128712;</button>
                         <button class="button delete">&#10007;</button>
                     </li>
                     <li class="add-new-card">
@@ -67,14 +68,10 @@
             <div class="column-list">
                 <div class="column-header">
                     <!--Here goes the header for column-->
-                    Doing
+                    <h2>Doing</h2>
                     <button class="button delete">&#10007;</button>
                 </div>
                 <ul class="list-cards">
-                    <li class="card">
-                        <span>This is a card under doing</span>
-                        <button class="button delete">&#10007;</button>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -82,14 +79,10 @@
             <div class="column-list">
                 <div class="column-header">
                     <!--Here goes the header for column-->
-                    Done
+                    <h2>Done</h2>
                     <button class="button delete">&#10007;</button>
                 </div>
                 <ul class="list-cards">
-                    <li class="card">
-                        <span>This card is under doing</span>
-                        <button class="button delete">&#10007;</button>
-                    </li>
                 </ul>
             </div>
         </div>
