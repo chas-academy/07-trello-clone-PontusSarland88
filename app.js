@@ -13,35 +13,46 @@ $(function() {
 
     $( ".list-cards" ).sortable({
         connectWith: ".list-cards"
-      }).disableSelection();
-
-    // function addList(event) {
-    //     event.preventDefault();
-        
-    //     var listName = $(event.target).offsetParent().find("form").serializeArray();
-    //     consoel.log(listName);
-    // }
-
+    });
 
     $('body').on('click', '.list-cards .card .delete', function(event){
         $(event.target).parent().remove();
     });
 
-    $('.new-card').submit(function(event) {
+    $('body').on('click', '.new-card', function() {
         event.preventDefault();
-        var cardText = $(event.target).serializeArray();
-        $(event.target).find('input').val('');
+        var defaultThis = this;
+        var dialogOverlay = $('#dialog-overlay');
+        dialogOverlay.removeClass('hidden');
+        $("#dialog").dialog();
+        dialogOverlay.on('click', function() {
+            dialogOverlay.addClass('hidden');
+            $('#dialog').dialog('close');
+        });
 
-        if(cardText[0].value !== "") {
-            var newCard = `<li class="card">
-            ${cardText[0].value}
-            <button class="button delete">&#10007;</button>
-            </li>`;
-            
-            $(event.target).closest('.add-new-card').before(newCard);
-        }
-        else{
-            alert("You must enter a valid name!");
-        }
+        $(function() {
+            $('.save-card').submit(function (event) {
+                var cardText = $(event.target).serializeArray();
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                $(event.target).find('input').val('');
+                if(cardText[0].value !== "") {
+                    var newCard = `<li class="card">
+                    <span>${cardText[0].value}</span>
+                    <button class="button delete">&#10007;</button>
+                    </li>`;
+                    $(defaultThis).closest('.add-new-card').before(newCard);
+                }
+                else {
+                    alert("You must enter a valid name!");
+                }
+                dialogOverlay.addClass('hidden');
+                $('#dialog').dialog('close');
+            });
+        });
+    });
+
+    $("#tabs").tabs({
+        event: "mouseover"
     });
 });
