@@ -1,12 +1,130 @@
 body, html {
     margin: 0;
-    padding: 30px 0 0;
-    background-color: cyan;
+    background-color: rgb(0, 102, 255);
     color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-h1 {
+header h1 {
     text-align: center;
-    border-bottom-style: solid;
-    border-color: aliceblue;
-    border: 10px white;
+}
+
+#kanban-board {
+    
+}
+.column{
+    width: 400px;
+    margin: 0 5px;
+    height: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.column-list {
+    border: 1px solid black;
+    background: #b5dbf5;
+    border-radius: 4px;
+    display: flex;
+    box-sizing: border-box;
+    max-height: 100%;
+    position: relative;
+    flex-direction: column;
+    box-shadow: 0 2px black;
+    padding: 0 0 15px 0;
+    min-height: 100px;
+}
+
+.column-header{
+    text-align: center;
+    font-size: 16px;
+    min-height: 40px;
+    line-height: 40px;
+}
+
+.list-cards {
+    flex: 1 1 auto;
+    margin: 0 4px;
+    padding: 0 4px;
+}
+.card {
+    display: flex;
+    background: white;
+    color: rgb(51, 51, 51);
+    padding: 5px 5px 5px 7px;
+    border-radius: 2px;
+    border-bottom: 1px solid #dfdfdf;
+    height: 17px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.add-new-card {
+    width: 100%;
+    list-style: none;
+}
+.button {
+    cursor: pointer;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex: 0 0 160px;
+}
+.column-header .delete {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    padding: 4px
+}
+.card .delete {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    padding: 0px
+}
+.card .cardInfo {
+    position: absolute;
+    top: 3px;
+    right: 30px;
+    padding: 0px
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    margin: 0;
+    padding: 0;
+}
+#lastColumn {
+
+}
+.add-new-card {
+    position: relative;
+}
+.hidden {
+    display: none;
+}
+#dialog-overlay {
+    background: black;
+    opacity: 0.6;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 998;
+    top: 0;
+    left: 0;
+}
+.ui-dialog {
+    z-index: 999;
+    
+}
+#dialog {
+    background: white;
+}
+#tabs {
+    display: initial;
 }

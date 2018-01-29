@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,89 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="hidden" id="dialog" title="Add card">
+        <div id="tabs">
+            <ul>
+                <li>
+                    <a href="#tabs-1">Card info</a>
+                </li>
+                <li>
+                    <a href="#tabs-2">Choose date</a>
+                </li>
+            </ul>
+            <div id="tabs-1">
+                <form class="save-card" action="index.html">
+                    <input type="text" name="cart-title" placeholder="please name your card">
+                    <button class="button save ui-button">Add new card</button>
+                </form>
+            </div>
+            <div id="tabs-2">
+                <p>Date: <input type="text" id="datepicker"></p>
+            </div>
+        </div>
+    </div>
+    <div id="dialog-overlay" class="hidden">
+    </div>
     <header>
-        <h1>Pontus Kanban board</h1>
+        <h1 id="effect">Pontus Kanban board</h1>
     </header>
     <div id="kanban-board">
         <div class="column">
-            <div class="column-body">
+            <div class="column-list">
                 <div class="column-header">
                     <!--Here goes the header for column-->
-                    TODO
-                    <button class="button delete">&#10008;</button>
+                    <h2>Todo</h2>
+                    <button class="button delete">&#10007;</button>
                 </div>
                 <ul class="list-cards">
                     <li class="card">
-                        This is a card!
+                        <!--Enter card info -->
+                        <span class="card-title">This is an example card!</span> 
+                        <button class="button cardInfo">&#128712;</button>
                         <button class="button delete">&#10007;</button>
                     </li>
                     <li class="add-new-card">
                         <form class="new-card" action="index.html">
                             <input type="text" name="cart-title" placeholder="please name your card">
-                            <button class="button add-card">&#10003;</button>
+                            <button class="button add-card">Add new card</button>
                         </form>
                     </li>
                 </ul>
             </div>
         </div>
+        <div class="column">
+            <div class="column-list">
+                <div class="column-header">
+                    <!--Here goes the header for column-->
+                    <h2>Doing</h2>
+                    <button class="button delete">&#10007;</button>
+                </div>
+                <ul class="list-cards">
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+            <div class="column-list">
+                <div class="column-header">
+                    <!--Here goes the header for column-->
+                    <h2>Done</h2>
+                    <button class="button delete">&#10007;</button>
+                </div>
+                <ul class="list-cards">
+                </ul>
+            </div>
+        </div>
+        <div class="column" id="lastColumn">
+            <button id="new-column-list" class="button">Add new list</button>
+        </div>
     </div>
+
 </body>
+<script src="app.js"></script>
+
 </html>
