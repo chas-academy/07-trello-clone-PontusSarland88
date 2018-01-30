@@ -35,7 +35,6 @@ $(function () {
                     var newCard = `<li class="card">
                     <span class="card-title">${cardText[0].value} | </span>
                     <span class="date-title"> due date:  ${date}</span>
-                    <button class="button cardInfo">&#128712;</button>
                     <button class="button delete">&#10007;</button>
                     </li>`;
                     $(defaultThis).closest('.add-new-card').before(newCard);
@@ -55,11 +54,7 @@ $(function () {
             width: 500
         }, 1000);
     });
-    $('body').on('click', '.list-cards .card .cardInfo', function () {
-        var dialogOverlay = openDialog();
-
-    });
-
+    
     function openDialog() {
         event.preventDefault();
         var dialogOverlay = $('#dialog-overlay');
