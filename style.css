@@ -9,7 +9,7 @@ header h1 {
 }
 
 #kanban-board {
-    
+    height: 120vh;
 }
 .column{
     width: 400px;
@@ -31,8 +31,8 @@ header h1 {
     position: relative;
     flex-direction: column;
     box-shadow: 0 2px black;
-    padding: 0 0 15px 0;
-    min-height: 100px;
+    padding: 0 0 25px 0;
+    min-height: 144px;
 }
 
 .column-header{
@@ -70,6 +70,8 @@ header h1 {
     align-items: center;
     position: absolute;
     flex: 0 0 160px;
+    border-radius: 3px;
+
 }
 .column-header .delete {
     position: absolute;
@@ -83,12 +85,6 @@ header h1 {
     right: 4px;
     padding: 0px
 }
-.card .cardInfo {
-    position: absolute;
-    top: 3px;
-    right: 30px;
-    padding: 0px
-}
 
 ul {
     list-style: none;
@@ -99,9 +95,7 @@ ul li {
     margin: 0;
     padding: 0;
 }
-#lastColumn {
 
-}
 .add-new-card {
     position: relative;
 }
@@ -120,11 +114,41 @@ ul li {
 }
 .ui-dialog {
     z-index: 999;
-    
 }
+
 #dialog {
     background: white;
 }
+
 #tabs {
     display: initial;
 }
+
+header h1:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.ui-sortable-placeholder {
+    display: block;
+    background-color: rgba(187, 17, 17, 0.2);
+    border-color: transparent;
+    box-shadow: none;
+    border-radius: 3px;
+    height: 300px;
+    width: 400px;
+  }
+
+  .placeholder-cards {
+    display: block;
+    background-color: rgba(88, 179, 36, 0.2);
+    border-color: transparent;
+    box-shadow: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 400px;
+  }
+
+  .colorClass {
+      background-color: crimson;
+  }
