@@ -8,7 +8,7 @@ $(function () {
                 this.options.colors[
                     Math.floor(Math.random() * this.options.colors.length)
                 ]
-            );
+            ,1000);
             this._refresh();
         },
 
@@ -21,7 +21,7 @@ $(function () {
                 this.options.colors[
                     Math.floor(Math.random() * this.options.colors.length)
                 ]
-            );
+            ,1000);
         },
         _setOptions: function (options) {
             this.random();
