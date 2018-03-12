@@ -8,6 +8,7 @@ $(function () {
             placeholder: 'sortable-placeholder',
             revert: true
         });
+        $('#effect').effect('slide', 1200);
     }
     initSort();
 
@@ -18,7 +19,7 @@ $(function () {
     });
 
     $('body').on('click', '.list-cards .card .delete', function (event) {
-        $(event.target).parent().remove();
+        $(event.target).parent().effect('blind', 'slow').remove();
     });
 
     $('body').on('click', '.new-card', function () {
@@ -54,7 +55,7 @@ $(function () {
             width: 500
         }, 1000);
     });
-    
+
     function openDialog() {
         event.preventDefault();
         var dialogOverlay = $('#dialog-overlay');
@@ -86,6 +87,6 @@ $(function () {
     });
 
     $('#change-color').on('click', function () {
-        $('html, body').toggleClass('colorClass', 1000);
+        $('html, body').changeColor();
     });
 });

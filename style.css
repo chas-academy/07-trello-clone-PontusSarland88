@@ -1,9 +1,11 @@
-body, html {
+body,
+html {
     margin: 0;
     background-color: rgb(0, 102, 255);
     color: black;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 header h1 {
     text-align: center;
 }
@@ -11,7 +13,8 @@ header h1 {
 #kanban-board {
     height: 120vh;
 }
-.column{
+
+.column {
     width: 400px;
     margin: 0 5px;
     height: 100%;
@@ -35,7 +38,7 @@ header h1 {
     min-height: 144px;
 }
 
-.column-header{
+.column-header {
     text-align: center;
     font-size: 16px;
     min-height: 40px;
@@ -47,6 +50,7 @@ header h1 {
     margin: 0 4px;
     padding: 0 4px;
 }
+
 .card {
     display: flex;
     background: white;
@@ -58,10 +62,12 @@ header h1 {
     position: relative;
     margin-bottom: 5px;
 }
+
 .add-new-card {
     width: 100%;
     list-style: none;
 }
+
 .button {
     cursor: pointer;
     text-align: center;
@@ -71,14 +77,15 @@ header h1 {
     position: absolute;
     flex: 0 0 160px;
     border-radius: 3px;
-
 }
+
 .column-header .delete {
     position: absolute;
     top: 3px;
     right: 5px;
     padding: 4px
 }
+
 .card .delete {
     position: absolute;
     top: 3px;
@@ -91,6 +98,7 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 ul li {
     margin: 0;
     padding: 0;
@@ -99,9 +107,11 @@ ul li {
 .add-new-card {
     position: relative;
 }
+
 .hidden {
     display: none;
 }
+
 #dialog-overlay {
     background: black;
     opacity: 0.6;
@@ -112,6 +122,7 @@ ul li {
     top: 0;
     left: 0;
 }
+
 .ui-dialog {
     z-index: 999;
 }
@@ -137,9 +148,9 @@ header h1:hover {
     border-radius: 3px;
     height: 300px;
     width: 400px;
-  }
+}
 
-  .placeholder-cards {
+.placeholder-cards {
     display: block;
     background-color: rgba(88, 179, 36, 0.2);
     border-color: transparent;
@@ -147,8 +158,20 @@ header h1:hover {
     border-radius: 3px;
     height: 30px;
     width: 400px;
-  }
+}
 
-  .colorClass {
-      background-color: crimson;
-  }
+.crimson {
+    background-color: crimson;
+}
+
+.darkseagreen {
+    background-color: darkseagreen;
+}
+
+.darksalmon {
+    background-color: darksalmon;
+}
+
+.darkgoldenrod {
+    background-color: darkgoldenrod;
+}
